@@ -28,10 +28,11 @@ void Game::Play(){
         //Enemy move()
         //Ballet move()
         
-        if(/**/){
-            //CreateEnemy();
+        /*
+        if(){
+            CreateEnemy();
         }
-        
+        */
         
         
         
