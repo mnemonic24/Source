@@ -21,7 +21,6 @@ void Game::Play(){
     //Enemy生成
     //Ballet生成
     
-    
     while (true) {
         
         //Player move()
@@ -33,7 +32,6 @@ void Game::Play(){
             CreateEnemy();
         }
         */
-        
         
         
     }
