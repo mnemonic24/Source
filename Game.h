@@ -12,6 +12,7 @@
 
 
 #include "../JuceLibraryCode/JuceHeader.h"
+#include "Character.h"
 
 class Game {
 public:
