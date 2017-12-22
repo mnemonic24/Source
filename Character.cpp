@@ -15,14 +15,16 @@ Character::Character() {
 }
 
 void Character::setImage(char* file_name) {
+    /*
 	if (loaded_images[getType()] == 0) {
-// LoadGraph		loaded_images[getType()] = LoadGraph(file_name);
+        LoadGraph		loaded_images[getType()] = LoadGraph(file_name);
 	}
 	image = loaded_images[getType()];
-// LoadGraph	GetGraphSize(image, &width, &height);
+        LoadGraph	GetGraphSize(image, &width, &height);
  	hit_width  = width;
 	hit_height = height;
 	hit_x = hit_y = 0;
+     */
 }
 
 void Character::setPosition(int px, int py) {
