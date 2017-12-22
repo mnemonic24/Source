@@ -1,4 +1,4 @@
-/*
+﻿/*
   ==============================================================================
 
     Character.h
@@ -38,3 +38,40 @@ public:
 	bool hitTest(CharacterRef&);
 	virtual void hit() {};
 };
+<<<<<<< HEAD
+=======
+
+int Character::loaded_images[] = {};
+
+// 弾クラス
+class Shot : public Character {
+public:
+	Shot();
+	CharacterType getType() { return TYPE_SHOT; }
+	CharacterType hitType() { return TYPE_ENEMY; }
+	void move();
+	void hit();
+};
+
+			 // プレイヤークラス
+		 class Player : public Character {
+			 bool shot_flag;
+						int dead_time;
+public:
+	Player();
+	CharacterType getType() { return TYPE_PLAYER; }
+	void move();
+	void draw();
+	void hit();
+		 };
+
+						// 敵クラス
+					class Enemy : public Character {
+public:
+	Enemy();
+	CharacterType getType() { return TYPE_ENEMY; }
+	CharacterType hitType() { return TYPE_PLAYER; }
+	void move();
+	void hit();
+					};
+>>>>>>> 43f6f3aecd59805a42c7a040262ce16ef2af3865

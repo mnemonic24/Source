@@ -9,6 +9,7 @@
 */
 
 #include "Game.h"
+#include "Character.h"
 
 Game::Game() {
 }
@@ -17,10 +18,7 @@ Game::~Game() {
 }
 
 void Game::Play(){
-    //Player生成
-    //Enemy生成
-    //Ballet生成
-    
+	CharacterRef player(new Player()); //Player生成
     while (true) {
         
         //Player move()
@@ -38,5 +36,5 @@ void Game::Play(){
 }
 
 void Game::CreateEnemy(/*座標*/){
-    //Enemy生成
+	CharacterRef enemy(new Enemy());  //Enemy生成
 }
