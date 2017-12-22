@@ -1,4 +1,4 @@
-﻿/*
+/*
   ==============================================================================
 
     Character.h
@@ -38,8 +38,6 @@ public:
 	bool hitTest(CharacterRef&);
 	virtual void hit() {};
 };
-<<<<<<< HEAD
-=======
 
 int Character::loaded_images[] = {};
 
@@ -73,5 +71,4 @@ public:
 	CharacterType hitType() { return TYPE_PLAYER; }
 	void move();
 	void hit();
-					};
->>>>>>> 43f6f3aecd59805a42c7a040262ce16ef2af3865
+};
