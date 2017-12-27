@@ -14,16 +14,23 @@ Character::Character() {
 	remove_flag  = false;
 }
 
-void Character::setImage(char* file_name) {
-	if (loaded_images[getType()] == 0) {
+void Character::setImage(char* FileName, int FileSize) { //2引数に変更
+	//if (loaded_images[getType()] == 0) { 変更前の記述
 // LoadGraph		loaded_images[getType()] = LoadGraph(file_name);
-	}
-	image = loaded_images[getType()];
+//	}
+
+	image_bg = ImageCache::getFromMemory(FileName, FileSize);
+
+//	image = loaded_images[getType()];　変更前の記述
 // LoadGraph	GetGraphSize(image, &width, &height);
+
  	hit_width  = width;
 	hit_height = height;
 	hit_x = hit_y = 0;
 }
+
+
+
 
 void Character::setPosition(int px, int py) {
 	x = px; y = py;
