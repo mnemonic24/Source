@@ -61,7 +61,7 @@ public:
 	void move();
 	void draw();
 	void hit();
-		 };
+};
 
 						// 敵クラス
 					class Enemy : public Character {
