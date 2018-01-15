@@ -37,7 +37,7 @@ void MainContentComponent::paint (Graphics& g)
 	g.fillAll(Colours::black);
 
 	image_bg = ImageCache::getFromMemory(FileName, FileSize);
-
+	g.drawImageWithin(image_bg, 0, 0, image_bg.getWidth(), image_bg.getHeight() + 64, RectanglePlacement::yTop, false);
 
 }
 
