@@ -24,6 +24,7 @@ public:
     ~MainContentComponent();
 
     void paint (Graphics& g) override;
+	void ImageData(char*, int);
     void resized() override;
 	char* FileName;
 	int FileSize;
