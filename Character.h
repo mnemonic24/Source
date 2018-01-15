@@ -27,9 +27,10 @@ protected:
 	void remove() { remove_flag  = true; }
 public:
 	Character();
-	void setImage(char*);
+//	void setImage(char*, int);
 	void setPosition(int, int);
 	void setHitArea(int, int, int, int);
+//	void paint(Graphics& g);
 	bool isRemove() { return remove_flag; }
 	virtual CharacterType getType() = 0;
 	virtual CharacterType hitType() { return TYPE_NONE; }
