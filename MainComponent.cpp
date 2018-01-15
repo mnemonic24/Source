@@ -19,14 +19,26 @@ MainContentComponent::~MainContentComponent()
 {
 }
 
+void MainContentComponent::ImageData(char* Name, int Size)
+{
+	FileName = Name;
+	FileSize = Size;
+}
+
 void MainContentComponent::paint (Graphics& g)
 {
     // (Our component is opaque, so we must completely fill the background with a solid colour)
-    g.fillAll (getLookAndFeel().findColour (ResizableWindow::backgroundColourId));
+//    g.fillAll (getLookAndFeel().findColour (ResizableWindow::backgroundColourId));
 
-    g.setFont (Font (16.0f));
-    g.setColour (Colours::white);
-    g.drawText ("Hello World!", getLocalBounds(), Justification::centred, true);
+//    g.setFont (Font (16.0f));
+ //   g.setColour (Colours::white);
+ //   g.drawText ("Hello World!", getLocalBounds(), Justification::centred, true);
+
+	g.fillAll(Colours::black);
+
+	image_bg = ImageCache::getFromMemory(FileName, FileSize);
+
+
 }
 
 void MainContentComponent::resized()

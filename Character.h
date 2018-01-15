@@ -20,7 +20,6 @@ class Character {
 	bool remove_flag;
 protected:
 	int image;
-	Image image_bg;
 	int x, y;
 	int width, height;
 	int hit_x, hit_y;
@@ -28,10 +27,10 @@ protected:
 	void remove() { remove_flag  = true; }
 public:
 	Character();
-	void setImage(char*, int);
+//	void setImage(char*, int);
 	void setPosition(int, int);
 	void setHitArea(int, int, int, int);
-
+//	void paint(Graphics& g);
 	bool isRemove() { return remove_flag; }
 	virtual CharacterType getType() = 0;
 	virtual CharacterType hitType() { return TYPE_NONE; }

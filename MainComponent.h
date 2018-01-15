@@ -23,8 +23,12 @@ public:
     MainContentComponent();
     ~MainContentComponent();
 
-    void paint (Graphics&) override;
+    void paint (Graphics& g) override;
     void resized() override;
+	char* FileName;
+	int FileSize;
+	Image image_bg;
+
 
 private:
     //==============================================================================

@@ -13,6 +13,7 @@
 Character::Character() {
 	remove_flag  = false;
 }
+/*
 
 void Character::setImage(char* FileName, int FileSize) { //2引数に変更
 	//if (loaded_images[getType()] == 0) { 変更前の記述
@@ -29,8 +30,17 @@ void Character::setImage(char* FileName, int FileSize) { //2引数に変更
 	hit_x = hit_y = 0;
 }
 
+*/
+
+/*
+void Character::paint(Graphics& g)
+{
+	g.clear();
 
 
+	g.drawImageWithin(image_bg, 0, 0, image_bg.getWidth(), image_bg.getHeight() + 64, RectanglePlacement::yTop, false);
+}
+*/
 
 void Character::setPosition(int px, int py) {
 	x = px; y = py;
