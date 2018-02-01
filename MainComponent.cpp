@@ -36,7 +36,17 @@ void MainContentComponent::paint (Graphics& g)
 
 	g.fillAll(Colours::black);
 
-	image_bg = ImageCache::getFromMemory(FileName, FileSize);
+	image_bg = ImageCache::getFromMemory(BinaryData::GUI_base_png, BinaryData::GUI_base_pngSize);
+	g.drawImageWithin(image_bg, //image_bg check
+		0, 0, // left top xy
+		image_bg.getWidth(), image_bg.getHeight() + 64, //wide height
+		RectanglePlacement::yTop, //on center
+		false);// dont draw on alpha channel
+	image_bg = ImageCache::getFromMemory(BinaryData::jiki_png, BinaryData::jiki_pngSize);
+	g.drawImageWithin(image_bg, 0, 0, image_bg.getWidth(), image_bg.getHeight() + 64, RectanglePlacement::yTop, false);
+	image_bg = ImageCache::getFromMemory(BinaryData::tama_png, BinaryData::tama_pngSize);
+	g.drawImageWithin(image_bg, 0, 0, image_bg.getWidth(), image_bg.getHeight() + 64, RectanglePlacement::yTop, false);
+	image_bg = ImageCache::getFromMemory(BinaryData::target_png, BinaryData::target_pngSize);
 	g.drawImageWithin(image_bg, 0, 0, image_bg.getWidth(), image_bg.getHeight() + 64, RectanglePlacement::yTop, false);
 
 }
